@@ -1,0 +1,288 @@
+.profile_info_div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.profile_image {
+    width: 10rem;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.profile_details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.TagLine {
+    position: relative;
+}
+
+.tagline_textarea {
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.textarea_edit {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.tagline_textarea:focus {
+    outline: none;
+}
+
+.profile_add_button_div {
+    position: fixed;
+    bottom: 6rem;
+    right: 8rem;
+    z-index: 1000;
+}
+
+.profile_createnew_button {
+    padding: 1.5rem;
+    border-radius: 50%;
+    outline: none;
+    border-width: 0.5px;
+    cursor: pointer;
+    border-color: "#0000";
+    background-color: wheat;
+}
+
+.profile_createnew_addicon {
+    width: 3em !important;
+    height: 3em !important;
+}
+
+.profile_createnew_button:hover {
+    background-color: antiquewhite;
+}
+
+.profile_newInputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+
+    label {
+        font-size: 2rem;
+        font-weight: 600;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+
+    input {
+        outline: none;
+        padding: 8px;
+        border-radius: 8px;
+        border: 0;
+    }
+}
+
+.modal_handler {
+    margin: 3rem 5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.modal_button_group {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    button {
+        padding: 1rem;
+        text-align: center;
+        border-radius: 8px;
+        outline: none;
+        border: none;
+        background-color: aliceblue;
+    }
+
+    button:hover {
+        outline: none;
+        background-color: burlywood;
+    }
+}
+
+.parent {
+    width: 450px;
+    margin: auto;
+    background: #ffffff;
+}
+
+.file-upload {
+    text-align: center;
+    border: 3px dashed rgb(210, 227, 244);
+    padding: 1.5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.file-upload p {
+    font-size: 0.87rem;
+    margin-top: 12px;
+    font-weight: 500;
+    color: #bbcada;
+}
+
+.file-upload input {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+@media(300px <=width <=600px) {
+    .profile_info_div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tagline_textarea {
+        height: 20rem;
+        width: 20em;
+    }
+
+    .profile_add_button_div {
+        position: fixed;
+        bottom: 1.5rem;
+        right: 1rem;
+        z-index: 1000;
+    }
+
+    .profile_createnew_button {
+        padding: 1rem;
+        border-radius: 40%;
+        outline: none;
+        border-width: 0.5px;
+        cursor: pointer;
+        border-color: "#0000";
+        background-color: wheat;
+    }
+
+    .profile_createnew_addicon {
+        width: 2em !important;
+        height: 2em !important;
+    }
+
+    .modal_handler {
+        margin: 5px 4px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 1rem;
+        flex-direction: column;
+
+        h2 {
+            font-size: large;
+            font-weight: 600;
+            text-align: center !important;
+        }
+    }
+
+    .profile_newInputs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 8px;
+
+        label {
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+
+        input {
+            width: 75%;
+            outline: none;
+            padding: 8px;
+            border-radius: 8px;
+            border: 0;
+        }
+    }
+
+
+    .parent {
+        width: 200px;
+        margin: auto;
+        background: #ffffff;
+    }
+
+    .modal_button_group {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        button {
+            padding: 1rem;
+            text-align: center;
+            border-radius: 8px;
+            outline: none;
+            border: none;
+            background-color: aliceblue;
+        }
+
+        button:hover {
+            outline: none;
+            background-color: burlywood;
+        }
+    }
+
+    .file-upload {
+        text-align: center;
+        border: 1.5px dashed rgb(210, 227, 244);
+        padding: 12px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .file-upload p {
+        font-size: 0.5rem;
+        margin-top: 12px;
+        font-weight: 500;
+        color: #bbcada;
+    }
+
+    .file-upload h3 {
+        font-size: 1rem;
+        margin-top: 12px;
+        font-weight: 800;
+        color: #000000;
+    }
+
+    .file-upload input {
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+}

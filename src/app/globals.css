@@ -13,10 +13,114 @@ body {
 main {
   margin: 2rem 4rem;
   padding: 1rem;
+  height: auto;
 }
 
 @media(300px <=width <=600) {
   main {
     margin: 1rem 2rem;
   }
+}
+
+.AuthMain{
+  margin: 5rem !important;
+  padding: 2rem !important;
+}
+
+/* Container for the main layout */
+.AuthMainDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: antiquewhite;
+  box-shadow: 12px 10px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid gray;
+  border-radius: 8px;
+  /* Padding to ensure content doesn't touch the edges */
+}
+
+/* Container for the image */
+.authDiv {
+  flex: 3;
+  /* Flex to allow this container to grow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for the login form */
+.AuthContainer {
+  flex: 1;
+  /* Flex to allow this container to grow */
+  max-width: 500px;
+  /* Maximum width for the form */
+  margin: 2rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 8px;
+  /* Ensure background color contrasts with page */
+}
+
+.authImg{
+  width: 100% !important;
+  height: 100% !important;
+  object-fit:contain;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+/* Styling for input fields */
+.authinput {
+  width: 100%;
+  /* Full width within its container */
+  max-width: 300px;
+  /* Maximum width for input */
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid grey;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* Hover state for input fields */
+.authinput:hover {
+  border: 1px solid black;
+  /* Consistent border width */
+}
+
+/* Focus state for input fields */
+.authinput:focus {
+  outline: none;
+  /* Remove default focus outline */
+  border: 1.5px solid black;
+  /* Thicker border on focus */
+}
+
+/* Styling for the login button */
+.authButton {
+  width: 100%;
+  /* Full width within its container */
+  max-width: 300px;
+  /* Maximum width for button */
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid grey;
+  background-color: antiquewhite;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  transition: background-color 0.3s;
+  /* Smooth transition for background color */
+}
+
+/* Hover state for the login button */
+.authButton:hover {
+  background-color: lightgray;
+  /* Change background color on hover */
 }

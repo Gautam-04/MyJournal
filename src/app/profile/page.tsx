@@ -8,6 +8,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import NewModal from '@/components/Modals/NewModal';
 import Image from "next/image";
+import Header from '@/components/Header/Header';
 
 type Props = {}
 
@@ -56,6 +57,8 @@ const page:React.FC<Props> = () => {
       }
 
   return (
+    <>
+    <Header />
     <main>
       <div className="profile_info_div">
         <div className="profile_image_div">
@@ -65,7 +68,7 @@ const page:React.FC<Props> = () => {
             width={50}
             height={50}
             alt="Picture of the author"
-          />
+            />
         </div>
         <div className="profile_details">
           <h1>User_Name</h1>
@@ -80,13 +83,13 @@ const page:React.FC<Props> = () => {
               onChange={(e) => {
                 setProfileTagline(e.target.value);
               }}
-            />
+              />
             <MdEditSquare
               onClick={handleEditClick}
               width={20}
               height={20}
               className="textarea_edit"
-            />
+              />
           </div>
         </div>
       </div>
@@ -95,12 +98,12 @@ const page:React.FC<Props> = () => {
           onClick={createNewJournal}
           type="submit"
           className="profile_createnew_button"
-        >
+          >
           <IoAddSharp
             width={100}
             height={100}
             className="profile_createnew_addicon"
-          />
+            />
         </button>
       </div>
       <NewModal isOpen={modalOpen} onClose={closeModal}>
@@ -121,14 +124,14 @@ const page:React.FC<Props> = () => {
           {/* <div className="profile_newInputs custom-file-input-label">
             <label for="custom-file-input">Select a Banner</label>
             <input
-              type="file"
-              className="custom-file-input"
+            type="file"
+            className="custom-file-input"
               onChange={(e) => {
                 console.log(e.target.value);
               }}
               accept="image/png, image/jpg, image/gif, image/jpeg"
-            />
-          </div> */}
+              />
+            </div> */}
           <div className="parent">
             <div className="file-upload">
               <FaUpload width={50} height={50} />
@@ -146,6 +149,7 @@ const page:React.FC<Props> = () => {
         </div>
       </NewModal>
     </main>
+  </>
   )
 }
 

@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import axios from 'axios'
+import { toast } from 'react-toastify'
 
 type Props = {}
 
@@ -27,9 +28,11 @@ const page:React.FC<Props> = () => {
       setLoading(true);
       const response = await axios.post("/api/users/signup", {username,email,password,onelineInfo});
       console.log("Signup success", response.data);
+      toast.success("Signup Successful");
       router.push("/signin");
     } catch (error: any) {
       console.log("Signup failed", error);
+      toast.error("Signup Unsuccessful");
     }finally{
       setLoading(false);
     }

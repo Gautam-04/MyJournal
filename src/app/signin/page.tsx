@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
+import { toast } from 'react-toastify'
 
 type Props = {}
 
@@ -24,8 +25,10 @@ async function handleSubmit(e: React.FormEvent){
     setLoading(true)
     const res = await axios.post("/api/users/signin",{email,password})
     console.log("Login success", res.data);
+    toast.success("Login Successful");
     router.push("/profile")
   } catch (error: any) {
+    toast.error("Login Unsuccessful");
     console.log("Login failed" , error)
   }finally{
     setLoading(false)

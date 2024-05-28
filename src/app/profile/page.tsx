@@ -9,12 +9,14 @@ import "react-datepicker/dist/react-datepicker.css";
 import NewModal from '@/components/Modals/NewModal';
 import Image from "next/image";
 import Header from '@/components/Header/Header';
+import { useRouter } from 'next/navigation';
 
 type Props = {}
 
 type ValuePiece = Date | null;
 
 const page:React.FC<Props> = () => {
+  const router = useRouter()
 
     const [profile_tagline, setProfileTagline] = useState<string | number>("");
     const [modalOpen, setModalOpen] = useState<boolean>(false);
@@ -54,6 +56,7 @@ const page:React.FC<Props> = () => {
       function handleSubmit(e: React.FormEvent) {
         console.log(title,date);
         e.preventDefault();
+        router.push("/journal")
       }
 
   return (

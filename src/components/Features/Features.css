@@ -1,0 +1,61 @@
+.FeaturesContainer1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3rem 6rem;
+    gap: 2rem;
+}
+
+.FeaturesContainer2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin: 3rem 6rem;
+    gap: 2rem;
+}
+
+.FeaturesContainer1Details{
+    padding: 1rem 2rem;
+
+    h1{
+        padding: 8px;
+        font-size: 54px;
+        font-weight: bolder;
+        letter-spacing: 2px;
+        font-family: 'Times New Roman', Times, serif;
+        color: #efb0b0;
+    }
+
+    h6{
+        padding: 8px 0;
+        font-size: 32px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-family:'Courier New', Courier, monospace;
+        color: black;
+    }
+    
+    p{
+        padding: 8px;
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 2px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: grey;
+    }
+}
+
+
+.RecommendedBy{
+    display: grid;
+    text-align: center;
+    padding: 40px 0 0 0;
+}
+
+.IconsImg{
+    margin: 0 auto !important;
+    width: 100%;
+    height: auto;
+    max-width: 780px;
+}

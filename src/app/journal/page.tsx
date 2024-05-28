@@ -14,6 +14,7 @@ const page:React.FC<Props> = () => {
     function handleSubmit(e: React.FormEvent) {
       console.log(Title, Date);
       e.preventDefault();
+      
     }
 
   return (

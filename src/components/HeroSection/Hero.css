@@ -24,14 +24,21 @@
 }
 
 .HeroSectionDiv1 h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+        padding: 8px;
+        font-size: 54px;
+        font-weight: bolder;
+        letter-spacing: 2px;
+        font-family: 'Times New Roman', Times, serif;
+        color: #674949;
 }
 
 .HeroSectionDiv1 p {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-    max-width: 600px;
+        padding: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: grey;
 }
 
 .loginButton {
@@ -40,13 +47,59 @@ width: 100%;
     padding: 12px;
     border-radius: 8px;
     border: 1px solid grey;
-    background-color: rgb(239, 176, 176);
+    background-color:  rgb(202, 138, 138);
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
+    color: white;
 }
 
 .loginButton:hover {
-    background-color: rgb(201, 122, 122);
+    background-color: rgb(239, 176, 176);
+    color: black;
+}
+
+@media (300px <= width <= 600px){
+    .HeroSectionMainDiv{
+        flex-direction: column-reverse;
+    }
+    
+    .HeroSectionDiv1{
+        gap: 0.5rem;
+        padding: 1rem 1rem;
+    }
+
+        .HeroSectionDiv2 {
+            width: 100%;
+        }
+    
+        .HeroSectionImg1 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    
+        .HeroSectionDiv1 h1 {
+            padding: 2px;
+            font-size: 54px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            font-family: 'Times New Roman', Times, serif;
+            color: #efb0b0;
+        }
+    
+        .HeroSectionDiv1 p {
+            padding: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: grey;
+        }
+
+    .loginButton{
+        margin-top: 1rem;
+        min-width: 260px;
+    }
 }

@@ -59,3 +59,63 @@
     height: auto;
     max-width: 780px;
 }
+
+@media(300px <= width <= 600px){
+    .FeaturesContainer1 {
+            margin: 2rem 1rem;
+            gap: 1rem;
+            flex-direction: column;
+        }
+    
+    .FeaturesContainer2 {
+        flex-direction: column;
+        margin: 2rem 1rem;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+    
+        .FeaturesContainer1Details {
+            padding: 0;
+
+            h1 {
+                font-size: 40px;
+                font-weight: bolder;
+                letter-spacing: 1px;
+                font-family: 'Times New Roman', Times, serif;
+                color: #efb0b0;
+            }
+    
+            h6 {
+                padding: 8px 0;
+                font-size: 30px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                font-family: 'Courier New', Courier, monospace;
+                color: black;
+            }
+    
+            p {
+                padding: 8px;
+                font-size: 1rem;
+                font-weight: 500;
+                letter-spacing: 1px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: grey;
+            }
+        }
+    
+        .FeatuesImg{
+            padding: 8px 0;
+            width: 100%;
+            height: auto;
+        }
+
+    .RecommendedBy{
+        padding: 25px 0 0 0;
+    }
+
+    .IconsImg{
+        width: 100%;
+        height: auto;
+    }
+}

@@ -10,6 +10,10 @@ import NewModal from '@/components/Modals/NewModal';
 import Image from "next/image";
 import Header from '@/components/Header/Header';
 import { useRouter } from 'next/navigation';
+import { CiLogout } from "react-icons/ci";
+import { ToastContainer, toast } from 'react-toastify'
+import "react-toastify/dist/ReactToastify.css";
+import axios from 'axios';
 
 type Props = {}
 
@@ -59,6 +63,19 @@ const page:React.FC<Props> = () => {
         router.push("/journal")
       }
 
+      async function Logout(e: any) {
+        e.preventDefault();
+        try {
+          await axios.get("/api/users/logout")
+          console.log("Logout successfull");
+          toast.success(`Logout Successfully`);
+          router.push('/')
+        } catch (error:any) {
+          toast.error("Logout Unsuccessfull")
+          console.log("Logout not successfull", error)
+        }
+      } 
+
   return (
     <>
     <Header />
@@ -95,6 +112,19 @@ const page:React.FC<Props> = () => {
               />
           </div>
         </div>
+      </div>
+      <div className="profile_logout_button_div">
+        <button
+          onClick={Logout}
+          type="submit"
+          className="profile_createnew_button"
+          >
+          <CiLogout
+            width={100}
+            height={100}
+            className="profile_createnew_addicon"
+            />
+        </button>
       </div>
       <div className="profile_add_button_div">
         <button
@@ -152,6 +182,18 @@ const page:React.FC<Props> = () => {
         </div>
       </NewModal>
     </main>
+    <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
   </>
   )
 }

@@ -4,6 +4,8 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 import "./globals.css";
+import { Suspense } from "react";
+import Loading from "./loading"
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Suspense fallback={<Loading />}>{children}</Suspense>
+        </body>
     </html>
   );
 }

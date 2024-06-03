@@ -5,7 +5,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import axios from 'axios'
-import { toast } from 'react-toastify'
+import { ToastContainer, toast } from 'react-toastify'
+import "react-toastify/dist/ReactToastify.css";
 
 type Props = {}
 
@@ -38,6 +39,7 @@ const page:React.FC<Props> = () => {
     }
   }
   return (
+  <>
     <main className='AuthMain'>
       <div className="AuthMainDiv">
         <div className="authDiv">
@@ -66,6 +68,19 @@ const page:React.FC<Props> = () => {
         </div>
       </div>
     </main>
+    <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
+  </>
   )
 }
 

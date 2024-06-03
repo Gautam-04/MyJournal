@@ -5,7 +5,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
-import { toast } from 'react-toastify'
+import { ToastContainer, toast } from 'react-toastify'
+import "react-toastify/dist/ReactToastify.css";
 
 type Props = {}
 
@@ -37,6 +38,7 @@ async function handleSubmit(e: React.FormEvent){
 
 
   return (
+    <>
     <main className='AuthMain'>
       <div className="AuthMainDiv">
         <div className="authDiv">
@@ -58,6 +60,19 @@ async function handleSubmit(e: React.FormEvent){
         </div>
       </div>
     </main>
+    <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
+    </>
   )
 }
 

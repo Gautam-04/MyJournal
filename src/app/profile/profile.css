@@ -47,6 +47,13 @@
     z-index: 1000;
 }
 
+.profile_logout_button_div{
+    position: fixed;
+    bottom: 6rem;
+    left: 8rem;
+    z-index: 1000;
+}
+
 .profile_createnew_button {
     padding: 1.5rem;
     border-radius: 50%;
@@ -169,6 +176,13 @@
         right: 1rem;
         z-index: 1000;
     }
+
+    .profile_logout_button_div{
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1rem;
+    z-index: 1000;
+}
 
     .profile_createnew_button {
         padding: 1rem;

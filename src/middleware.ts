@@ -15,13 +15,13 @@ export function middleware(request: NextRequest) {
     if(!isPublicPath && !token){
         return NextResponse.redirect(new URL('/signin',request.url))
     }
-
-    return NextResponse.redirect(new URL('/journal',request.url))
 }
 
 export const config = {
     matcher: [
-        // '/profile',
-        // '/journal'
+        '/signin',
+        '/signup',
+        '/profile',
+        '/journal'
     ]
 }
